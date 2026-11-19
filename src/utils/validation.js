@@ -13,6 +13,7 @@ export function validateName(value) {
   return null;
 }
 
+
 export function validateCuisine(value) {
   const trimmed = (value ?? "").trim();
   if (!trimmed) return "La cuisine est obligatoire.";
@@ -39,6 +40,7 @@ export function validatePrepTime(value) {
   }
   return null;
 }
+
 
 export function validateRecipeForm({ name, cuisine, difficulty, prepTimeMinutes }) {
   return {

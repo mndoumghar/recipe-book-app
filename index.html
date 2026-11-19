@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>recipe book app</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carnet de recettes</title>
 </head>
-<body>
-  <script type="module" src="./js/app.js"></script>
+<body class="min-h-screen bg-page text-ink antialiased">
+  <div class="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-10 md:px-8">
+    <header class="flex flex-col gap-2 text-center md:text-left">
+      <p class="text-sm font-semibold uppercase tracking-wide text-accent">Atelier cuisine</p>
+      <h1 class="text-3xl font-bold text-ink md:text-4xl">Carnet de recettes</h1>
+      <p class="max-w-2xl text-sm text-ink/70 md:text-base">
+        Parcourez, recherchez, ajoutez et retirez des recettes partagées par le club.
+      </p>
+    </header>
+
+    <section aria-label="Recherche" class="flex flex-col gap-2">
+      <label for="search-input" class="text-sm font-medium text-ink">Rechercher une recette</label>
+      <div class="flex gap-2">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Ex. pizza, poulet, salade..."
+          aria-label="Rechercher une recette par mot-clé"
+          class="w-full rounded-xl border border-ink/10 bg-page px-4 py-3 text-ink outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20"
+        />
+        <button
+          type="button"
+          id="clear-search-button"
+          class="shrink-0 rounded-xl border border-ink/10 px-4 py-3 text-sm font-medium text-ink/70 transition-colors hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent/40"
+        >
+          Effacer
+        </button>
+      </div>
+    </section>
+
+    <section aria-label="État de l'application" class="flex flex-col items-center gap-2">
+      <p id="message" aria-live="polite"></p>
+      <p id="recipes-counter" aria-live="polite"></p>
+    </section>
+
+    <section aria-label="Liste des recettes" id="recipes-container" class="grid grid-cols-1 gap-6 md:grid-cols-2"></section>
+
+    <nav id="pagination-container" aria-label="Pagination des recettes"></nav>
+
+    <section id="add-recipe-container" aria-label="Ajouter une recette"></section>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>

@@ -1,10 +1,11 @@
-import { validateRecipeForm, hasErrors, ALLOWED_DIFFICULTIES } from "../utils/validation.js";
+import { 
+      validateRecipeForm,
+      hasErrors,
+      ALLOWED_DIFFICULTIES
+   } 
+   from "../utils/validation.js";
 
-/**
- * Builds the "add a recipe" form. Validation and submission wiring live
- * here; the actual POST call and card insertion are the caller's job,
- * passed in as `onSubmit`.
- */
+
 export function createRecipeForm({ onSubmit }) {
   const form = document.createElement("form");
   form.noValidate = true;
@@ -34,6 +35,7 @@ export function createRecipeForm({ onSubmit }) {
   submitButton.textContent = "Ajouter la recette";
   submitButton.className =
     "rounded-lg bg-accent px-5 py-3 font-semibold text-page transition-colors hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent/40 disabled:cursor-not-allowed disabled:opacity-50";
+
 
   const formMessage = document.createElement("p");
   formMessage.setAttribute("role", "status");
@@ -134,6 +136,7 @@ function fieldShell({ id, label }) {
 const fieldInputClasses =
   "rounded-xl border border-ink/10 bg-page px-4 py-2 text-ink outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20";
 
+
 function buildTextField({ id, label, type }) {
   const { wrapper, labelEl, error } = fieldShell({ id, label });
 
@@ -145,6 +148,7 @@ function buildTextField({ id, label, type }) {
     input.min = "1";
     input.max = "300";
   }
+  
   input.className = fieldInputClasses;
   input.setAttribute("aria-describedby", error.id);
 

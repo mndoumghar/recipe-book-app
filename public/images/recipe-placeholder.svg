@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Image indisponible">
+  <rect width="400" height="300" fill="#F7F4ED"/>
+  <rect x="0.5" y="0.5" width="399" height="299" fill="none" stroke="#24352E" stroke-opacity="0.12"/>
+  <g transform="translate(200,138)" fill="none" stroke="#A94F36" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="0" r="46" />
+    <path d="M -22 -10 C -22 -26 -6 -34 0 -20 C 6 -34 22 -26 22 -10 C 22 6 0 24 0 24 C 0 24 -22 6 -22 -10 Z" transform="scale(0.5)"/>
+    <path d="M -34 34 L 34 -34" stroke="#A94F36" stroke-opacity="0.55"/>
+  </g>
+  <text x="200" y="222" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#24352E" fill-opacity="0.6">Photo indisponible</text>
+</svg>

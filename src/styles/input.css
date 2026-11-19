@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-page: #F7F4ED;     /*  Warm Cream      */
+  --color-ink: #24352E;     /*  Forest Green main text   */
+  --color-accent: #A94F36; /*  Teeracotta    */
+}
+
