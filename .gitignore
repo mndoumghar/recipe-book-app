@@ -1,2 +1,7 @@
 node_modules
-todo.md
+dist
+coverage
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+
